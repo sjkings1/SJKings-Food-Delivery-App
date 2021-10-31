@@ -1,0 +1,54 @@
+img.LP--srcImage {
+    width :100%;
+    height :100vh;
+    display: block;
+  }
+
+div.LP--content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70vw;
+    height: 50vh;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #00ffff6b;
+  }
+
+h1.text1 {
+    color: #ffffff;
+    font-size: 90px;
+    font-family: 'Racing Sans One', cursive;
+    height : 20%;
+    width : 100%;
+}
+
+p.text1 {
+    color: #ffffff;
+    font-size: 39px;
+    font-family: 'Oswald', sans-serif;
+    height: 25%;
+    width : 100%;
+}
+
+div.LP--searchBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 7%;
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ant-popover {
+    width: 30%;
+}
+ 
+  
