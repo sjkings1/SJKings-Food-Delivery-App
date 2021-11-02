@@ -10,12 +10,12 @@ div.LP--content {
     align-items: center;
     justify-content: center;
     width: 70vw;
-    height: 50vh;
+    height: 60vh;
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #00ffff6b;
+    background-color: #ffffff2d;
   }
 
 h1.text1 {
@@ -29,7 +29,7 @@ h1.text1 {
 p.text1 {
     color: #ffffff;
     font-size: 39px;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Lato', sans-serif;
     height: 25%;
     width : 100%;
 }
@@ -42,13 +42,52 @@ div.LP--searchBox{
     width: 70%;
     height: 7%;
     position: absolute;
-    top: 53%;
+    top: 54%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.ant-popover {
-    width: 30%;
+.ant-input {
+    height: 40px !important;
 }
- 
-  
+
+.ant-input-search-button {
+    height: 50px !important;
+}
+
+.ant-popover-inner-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.ant-popover {
+    width: 650px;
+    max-height: 240px;
+    overflow-y: scroll;
+}
+
+.ant-popover::-webkit-scrollbar {
+    display: none;
+}
+
+.ant-card {
+    display: flex;
+    margin: 5px !important;
+    width: 99% !important;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.ant-card-cover {
+    height: 100px;
+    width: 100px;
+}
+
+.ant-card-body {
+    width: 80%;
+}
+
+.ant-card-meta {
+    height: 120%;
+}

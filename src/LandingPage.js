@@ -1,14 +1,21 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./LandingPage.css"
 import { Input, Space } from 'antd';
 import "antd/dist/antd.css";
 import { Tag } from 'antd';
-import { Popover, Button } from 'antd';
+import { Popover } from 'antd';
+import { Card } from 'antd';
+
 
 const { Search } = Input;
-function LandingPage() {
+const { Meta } = Card;
 
-    var [popVisible, setPopVisible] = useState(false)
+function LandingPage(props) {
+
+    var [popVisible, setPopVisible] = useState(false);
+    var [clickedTagName, setClickedTagName] = useState("");
+    var [inTexToCard, SetInTexToCard] = useState(false);
+    var [searchFiltByFdApi, setSearchFiltByFdApi] = useState([]);
 
     function popVisibleChange() {
         setPopVisible(true);
@@ -16,43 +23,49 @@ function LandingPage() {
     function gohide() {
         setPopVisible(false);
     }
+    function handleTagsClick(nameOfTag) {
+        setClickedTagName(nameOfTag)
+    }
+    function aboutFoodData(searchFor) {
+
+        let filterReNv = props.fdData.reduce((accumulator, currentObject) => {
+
+        let filterOfNV = currentObject.menu_available.non_veg.filter(f => { return f.food_name.includes(searchFor) })
+
+        accumulator.push(...filterOfNV)
+        return accumulator
+
+        }, [])
+
+        setSearchFiltByFdApi(filterReNv)
+    }
+
     function renderTagInPop() {
         return (
             <div>
-                <Tag>
-                    <a href="https://www.zomato.com/">Link</a>
-                </Tag>
-                <Tag>
-                    <a href="https://www.zomato.com/">Link1</a>
-                </Tag>
-                <Tag>
-                    <a href="https://www.zomato.com/">Link2</a>
-                </Tag>
-                <Tag>
-                    <a href="https://www.zomato.com/">Link3</a>
-                </Tag>
-                <Tag>
-                    <a href="https://www.zomato.com/">Link4</a>
-                </Tag>
-                <Tag>
-                    <a href="https://www.zomato.com/">Link5</a>
-                </Tag>
-                <Tag>
-                    <a href="https://www.zomato.com/">Link6</a>
-                </Tag>
-                <Tag>
-                    <a href="https://www.zomato.com/">Link7</a>
-                </Tag>
-                <Tag>
-                    <a href="https://www.zomato.com/">Link8</a>
-                </Tag>
-                <Tag>
-                    <a href="https://www.zomato.com/">Link9</a>
-                </Tag>
-                <Tag>
-                    <a href="https://www.zomato.com/">Link10</a>
-                </Tag>
-            </div>)
+                {inTexToCard == false ? (
+                    <div>
+                        <Tag> <a onClick={(e) => { handleTagsClick(e.currentTarget.innerText) }}> Link 1 </a> </Tag>
+                        <Tag> <a onClick={(e) => { handleTagsClick(e.currentTarget.innerText) }}> Link 2 </a> </Tag>
+                        <Tag> <a onClick={(e) => { handleTagsClick(e.currentTarget.innerText) }}> Link 3 </a> </Tag>
+                    </div>
+                ) : (
+                    <div>
+                        {searchFiltByFdApi.map((e) => (
+                            <div>
+                                <Card
+                                    hoverable
+                                    style={{ width: 260 }}
+                                    cover={<img alt="example" src="https://b.zmtcdn.com/data/homepage_dish_data/2/9af65b8b2fd2bc7e5aba33c062dd2e3e.png" />}
+                                >
+                                    <Meta title={e.food_name} description={e.price} />
+                                </Card>
+                            </div>
+                        ))}
+                    </div>
+                )}
+            </div>
+        );
     }
 
     return (
@@ -75,21 +88,24 @@ function LandingPage() {
                     <Space direction="center">
                         <Popover
                             content={renderTagInPop}
-                            title="Title"
+                            title="Results"
                             trigger="click"
                             placement="bottom"
                             visible={popVisible}
                             onVisibleChange={popVisibleChange}
                         >
-                            <Search placeholder="input search text"
-                                onBlur={gohide}
+                            <Search
+                                onChange={(e) => {
+                                    aboutFoodData(e.currentTarget.value)
+                                    SetInTexToCard(true)
+                                }}
+                                // value={clickedTagName}
+                                placeholder="input search text"
+                                // onBlur={gohide}
                                 allowClear
                                 // onSearch={onSearch} 
-                                style={{ width: 500 }} />
+                                style={{ width: 700 }} />
                         </Popover>
-                        {/* <div><Tag>
-                        <a href="https://www.zomato.com/">Link</a>
-                    </Tag></div> */}
                     </Space>
                 </div>
 
