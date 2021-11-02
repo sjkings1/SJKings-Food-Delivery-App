@@ -45,9 +45,9 @@ function LandingPage(props) {
             <div>
                 {inTexToCard == false ? (
                     <div>
-                        <Tag> <a onClick={(e) => { handleTagsClick(e.currentTarget.innerText) }}> Link 1 </a> </Tag>
-                        <Tag> <a onClick={(e) => { handleTagsClick(e.currentTarget.innerText) }}> Link 2 </a> </Tag>
-                        <Tag> <a onClick={(e) => { handleTagsClick(e.currentTarget.innerText) }}> Link 3 </a> </Tag>
+                        <Tag> <a onClick={(e) => { handleTagsClick(e.currentTarget.innerText) }} href="https://www.zomato.com/"> Link 1 </a> </Tag>
+                        <Tag> <a onClick={(e) => { handleTagsClick(e.currentTarget.innerText) }} href="https://www.swiggy.com/"> Link 2 </a> </Tag>
+                        <Tag> <a onClick={(e) => { handleTagsClick(e.currentTarget.innerText) }} href="https://www.zomato.com/"> Link 3 </a> </Tag>
                     </div>
                 ) : (
                     <div>
