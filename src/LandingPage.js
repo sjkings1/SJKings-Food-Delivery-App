@@ -101,7 +101,7 @@ function LandingPage(props) {
                                 }}
                                 // value={clickedTagName}
                                 placeholder="input search text"
-                                // onBlur={gohide}
+                                onBlur={gohide}
                                 allowClear
                                 // onSearch={onSearch} 
                                 style={{ width: 700 }} />
