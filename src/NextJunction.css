@@ -1,3 +1,7 @@
+.NextJunction {
+    margin : 10px;
+}
+
 div.navBar {
     display: flex;
     flex-direction: row;

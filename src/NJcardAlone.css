@@ -13,6 +13,7 @@ div.cA {
     flex-wrap: wrap;
     justify-content: space-between;
     row-gap: 40px;
+    margin-bottom: 5%;
 }
 
 .NJcardAlone .ant-card {
