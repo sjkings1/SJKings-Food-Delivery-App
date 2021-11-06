@@ -1,0 +1,31 @@
+div.bC {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 85vw;
+    height: 5vh;
+}
+
+.NJbreadCrumb .ant-breadcrumb a {
+    font-size: 15px;
+    color: #000000;
+}
+
+.NJbreadCrumb .ant-breadcrumb a:hover {
+    color: #ff0000;
+}
+
+.NJbreadCrumb .ant-breadcrumb > span:last-child a {
+    font-size: 15px;
+    color: #9b9b9b;
+}
+
+.NJbreadCrumb .ant-breadcrumb > span:last-child a:hover {
+    font-size: 15px;
+    color: #000000;
+}
+
+.NJbreadCrumb .ant-breadcrumb-separator {
+    margin: 0 8px;
+    color: #000000;
+}

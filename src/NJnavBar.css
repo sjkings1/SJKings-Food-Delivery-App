@@ -1,0 +1,116 @@
+div.NJ-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    width: 75vw;
+    height: 10vh;
+    max-width: 75vw;
+    transform: translate(-50%, -50%);
+}
+
+/* TITLE */
+div.title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-self: center;
+}
+
+.NJnavBar h1 {
+    font-family: 'Racing Sans One', cursive;
+    font-size: 50px;
+    margin-top: 10px;
+}
+
+/* INPUT SEARCH BAR */
+div.searchBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.NJnavBar .ant-space-center {
+    transition-duration: 0.3s, 0.3s;
+    transition-timing-function: ease, ease;
+    transition-delay: 0s, 0s;
+    border-color: transparent;
+    box-shadow: 0 1px 2px -2px rgb(0 0 0 / 10%), 0 3px 6px 0 rgb(0 0 0 / 10%), 0 5px 12px 4px rgb(0 0 0 / 10%);
+}
+
+.NJnavBar .ant-space-center:hover {
+    border-color: transparent;
+    box-shadow: 0 1px 2px -2px rgb(0 0 0 / 30%), 0 3px 6px 0 rgb(0 0 0 / 30%), 0 5px 12px 4px rgb(0 0 0 / 30%);
+}
+
+.NJnavBar .ant-input {
+    height: 40px !important;
+}
+
+.NJnavBar .ant-input-search-button {
+    height: 50px !important;
+}
+
+/* .NJnavBar .ant-popover-inner {
+    background-color: rgb(255, 244, 244) !important;
+    background-clip: border-box;
+    border-radius: 2px;
+    border-color: red;
+    box-shadow: 0 1px 2px -2px rgb(0 0 0 / 10%), 0 3px 6px 0 rgb(0 0 0 / 10%), 0 5px 12px 4px rgb(0 0 0 / 10%);
+    border-color: transparent;
+} */
+
+.NJnavBar .ant-popover-inner-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.NJnavBar .ant-popover {
+    width: 650px;
+    max-height: 240px;
+    overflow-y: scroll;
+}
+
+.NJnavBar .ant-popover::-webkit-scrollbar {
+    display: none;
+}
+
+.NJnavBar .ant-card {
+    display: flex;
+    margin: 5px !important;
+    width: 99% !important;
+    flex-direction: row;
+    align-items: center;
+}
+
+.NJnavBar .ant-card-cover {
+    height: 100px;
+    width: 100px;
+}
+
+.NJnavBar .ant-card-body {
+    width: 80%;
+}
+
+.NJnavBar .ant-card-meta {
+    height: 120%;
+}
+
+/* AVATAR DROPDOWN */
+div.avatarDown {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.NJnavBar .ant-dropdown-link {
+    color: #000000 !important;
+}
+
+.NJnavBar .ant-dropdown-link:hover {
+    color: #ff0202 !important;
+}
+
+
+

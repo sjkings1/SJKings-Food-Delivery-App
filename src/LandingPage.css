@@ -70,7 +70,7 @@ div.LP--searchBox{
     display: none;
 }
 
-.ant-card {
+.landingPage .ant-card {
     display: flex;
     margin: 5px !important;
     width: 99% !important;
@@ -79,15 +79,15 @@ div.LP--searchBox{
 
 }
 
-.ant-card-cover {
+.landingPage .ant-card-cover {
     height: 100px;
     width: 100px;
 }
 
-.ant-card-body {
+.landingPage .ant-card-body {
     width: 80%;
 }
 
-.ant-card-meta {
+.landingPage .ant-card-meta {
     height: 120%;
 }

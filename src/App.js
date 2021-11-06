@@ -35,7 +35,7 @@ function App() {
 
         <Switch>
           <Route path="/section-nv">
-            <NextJunction />
+            <NextJunction fdData={importFdApi} />
           </Route>
         </Switch>
       </div>
@@ -44,3 +44,6 @@ function App() {
 }
 
 export default App;
+
+
+

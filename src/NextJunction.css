@@ -1,0 +1,51 @@
+div.navBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    top: 6%;
+    left: 50%;
+}
+
+div.breadCrumb {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    position: absolute;
+    width: 75vw;
+    height: 5vh;
+    max-width: 75vw;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: #1100ff2d; */
+}
+
+div.tagAlone {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    width: 75vw;
+    height: 6vh;
+    max-width: 75vw;
+    top: 27%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: #1100ff2d; */
+}
+
+div.cardAlone {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    width: 75vw;
+    height: 5vh;
+    max-width: 75vw;
+    top: 34%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

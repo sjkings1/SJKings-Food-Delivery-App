@@ -1,0 +1,32 @@
+div.tA{
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.NJtagAlone .ant-tag {
+    margin-right: 20px;
+    padding: 0px 15px;
+    font-size: 15px;
+    line-height: 38px;
+    white-space: nowrap;
+    background: #ffffff;
+    border: 1px solid #c9c9c9;
+    border-radius: 15px;
+}
+
+.NJtagAlone .ant-tag:hover {
+    background: #ffecec;
+    border: 1px solid #929292;
+}
+
+.NJtagAlone .ant-divider-horizontal {
+    display: flex;
+    clear: both;
+    width: 131%;
+    max-width: 131%;
+    margin: 24px 0;
+    justify-content: center;
+    background-color: red;
+}
