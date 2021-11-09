@@ -22,7 +22,7 @@ function NextJunction(props) {
             </div>
 
             <div className="cardAlone">
-                <NJcardAlone />
+                <NJcardAlone fdData={props.fdData} />
             </div> 
 
         </div>

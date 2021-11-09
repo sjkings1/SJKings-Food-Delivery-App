@@ -5,6 +5,7 @@ import "antd/dist/antd.css";
 import { Tag } from 'antd';
 import { Popover } from 'antd';
 import { Card } from 'antd';
+import { useHistory } from 'react-router-dom';
 
 
 const { Search } = Input;
@@ -15,6 +16,7 @@ function LandingPage(props) {
     var [popVisible, setPopVisible] = useState(false);
     var [inTexToCard, SetInTexToCard] = useState(false);
     var [searchFiltByFdApi, setSearchFiltByFdApi] = useState([]);
+    const history = useHistory();
 
     function popVisibleChange() {
         setPopVisible(true);
@@ -24,17 +26,38 @@ function LandingPage(props) {
     }
 
     function aboutFoodData(searchFor) {
-debugger
+
         let filterReNv = props.fdData.reduce((accumulator, currentObject) => {
 
-            let filterOfNV = currentObject.menu_available.non_veg.filter(f => { return f.food_name.toLowerCase().includes(searchFor.toLowerCase()) })
+            let filterOfNV = currentObject.menu_available.non_veg.filter(f => { return f.food_name.toLowerCase().includes(searchFor.toLowerCase()) });
 
             accumulator.push(...filterOfNV)
             return accumulator
 
         }, [])
+        let createUnshiftCategory = filterReNv[0].food_name.split(" ").map(e => {
+            if (e.toLowerCase().indexOf(searchFor.toLowerCase()) != -1) {
+                return e;
+            }
+        }).filter(f => { return f != undefined })[0];
+        let unshiftObject = {
+            food_name: createUnshiftCategory,
+            price: "200",
+            votes: "150",
+            category: "Category"
+        }
 
-        setSearchFiltByFdApi(filterReNv)
+        filterReNv.unshift(unshiftObject)
+        setSearchFiltByFdApi(filterReNv);
+    }
+
+    function categoryClickForNJ(uniqueCard) {
+        // debugger
+        history.push({
+            pathname : './section-nv',
+            state : uniqueCard.food_name
+        });
+
     }
 
     function renderTagInPop() {
@@ -49,13 +72,13 @@ debugger
                 ) : (
                     <div>
                         {searchFiltByFdApi.map((e) => (
-                            <div className="landingPage">
+                            <div className="landingPage" onClick={() => { categoryClickForNJ(e) }}>
                                 <Card
                                     hoverable
                                     style={{ width: 260 }}
                                     cover={<img alt="example" src="https://b.zmtcdn.com/data/homepage_dish_data/2/9af65b8b2fd2bc7e5aba33c062dd2e3e.png" />}
                                 >
-                                    <Meta title={e.food_name} description={e.price} />
+                                    <Meta title={e.food_name} description={e.category ? e.category : e.price} />
                                 </Card>
                             </div>
                         ))}

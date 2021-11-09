@@ -10,6 +10,7 @@ import {
   Link
 } from "react-router-dom";
 import NextJunction from './NextJunction';
+import RestaurantJunction from './RestaurantJunction';
 
 function App() {
   var [importFdApi, setImportFdApi] = useState([]);
@@ -38,6 +39,13 @@ function App() {
             <NextJunction fdData={importFdApi} />
           </Route>
         </Switch>
+
+        <Switch>
+          <Route path="/unique-restaurant">
+            <RestaurantJunction fdData={importFdApi} />
+          </Route>
+        </Switch>
+
       </div>
     </Router>
   );

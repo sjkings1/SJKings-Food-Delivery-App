@@ -1,8 +1,10 @@
-.NextJunction {
-    margin : 1px;
+div.restaurantJunction {
+    margin-top: 16%;
+    margin-left: 12%;
+    margin-right: 12%;
 }
 
-div.navBar {
+div.navBar1 {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -11,7 +13,7 @@ div.navBar {
     left: 50%;
 }
 
-div.breadCrumb {
+div.breadCrumb1 {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -25,7 +27,7 @@ div.breadCrumb {
     /* background-color: #1100ff2d; */
 }
 
-div.tagAlone {
+div.tagAlone1 {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -38,18 +40,4 @@ div.tagAlone {
     left: 50%;
     transform: translate(-50%, -50%);
     /* background-color: #1100ff2d; */
-}
-
-div.cardAlone {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: flex-end;
-    position: absolute;
-    width: 75vw;
-    height: 5vh;
-    max-width: 75vw;
-    top: 34%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }

@@ -17,8 +17,18 @@ div.cA {
 }
 
 .NJcardAlone .ant-card {
-    width: 350px !important;
+    width: 360px !important;
     border-radius: 30px;
+}
+
+.NJcardAlone .ant-card-hoverable {
+    border-color: transparent;
+    box-shadow: 0 1px 2px -2px rgb(0 0 0 / 5%), 0 3px 6px 0 rgb(0 0 0 / 5%), 0 5px 12px 4px rgb(0 0 0 / 5%);
+}
+
+.NJcardAlone .ant-card-hoverable:hover {
+    border-color: transparent;
+    box-shadow: 0 1px 2px -2px rgb(0 0 0 / 30%), 0 3px 6px 0 rgb(0 0 0 / 30%), 0 5px 12px 4px rgb(0 0 0 / 30%);
 }
 
 .NJcardAlone .ant-card-cover {
@@ -29,4 +39,100 @@ div.cA {
 
 .NJcardAlone .ant-card-cover img {
     border-radius: 25px 25px 25px 25px;
+}
+
+.NJcardAlone .ant-card-body {
+    padding: 20px;
+}
+
+div.hotelMinutes {
+    position: absolute;
+    right: 40px;
+    bottom: 44%;
+}
+
+div.hotelNameDes {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between !important;
+}
+
+.hotelNameDes .ant-card-meta {
+    margin: -5px 0;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: flex-start; */
+}
+
+.hotelNameDes .ant-card-meta-detail {
+    display: grid;
+    /* justify-items: start;
+    align-items: baseline; */
+}
+
+.hotelNameDes .ant-card-meta-detail > div:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+div.averagePrice {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.averagePrice .ant-rate {
+    height: 38px;
+    color: #2bffac; 
+}
+
+.averagePrice .ant-card-meta-description {
+    color: #ff0000;
+}
+
+.NJcardAlone .ant-divider-horizontal {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+    margin-top: 0px;
+    margin-bottom: 25px;;
+    background-color: #e0e0e0;
+}
+
+div.carouSlider {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    height: 10px;
+}
+
+.carouSlider .firstSlide {
+    display: flex !important;
+    justify-content: space-evenly;
+    align-items: stretch !important;
+}
+
+.firstSlide .first-h3 {
+    font-size: 14px !important;
+}
+
+.firstSlide .first-img {
+    height: 20px !important;
+}
+
+.carouSlider .secondSlide {
+    display: flex !important;
+    justify-content: space-evenly;
+    align-items: stretch !important;
+}
+
+.secondSlide .second-img {
+    height: 20px !important;
+}
+
+.secondSlide .second-h3 {
+    font-size: 14px !important;
 }
