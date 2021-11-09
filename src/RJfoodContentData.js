@@ -94,7 +94,7 @@ function RJfoodContentData(props) {
                     </PageHeader>
                 ))}
 
-                <h2> Dessert </h2>
+                {/* <h2> Dessert </h2>
                 {hls.menu_available.desserts.map(p => (
                     <PageHeader>
 
@@ -113,7 +113,7 @@ function RJfoodContentData(props) {
 
                                 <div className="averagePrice2">
                                     <Rate disabled defaultValue={Math.floor(Math.random() * (5 - 2) + 2)} />
-                                    <div className="description"> <Descriptions.Item> {"      " + p.votes + " Votes"} </Descriptions.Item> </div>
+                                    <div className="description"> <Descriptions.Item> {p.votes + " Votes"} </Descriptions.Item> </div>
                                 </div>
 
                             </Card>
@@ -121,7 +121,7 @@ function RJfoodContentData(props) {
                         </div>
 
                     </PageHeader>
-                ))}
+                ))} */}
 
             </div>
 
