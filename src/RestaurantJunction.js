@@ -27,7 +27,7 @@ function RestaurantJunction(props) {
             </div>
 
             <div className="foodContentData">
-                <RJfoodContentData />
+                <RJfoodContentData fdData={props.fdData} />
             </div>
 
         </div>
