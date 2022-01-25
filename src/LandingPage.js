@@ -99,7 +99,7 @@ function LandingPage(props) {
                 </div>
 
                 <div className="LP--content">
-                    <h1 className="text1"> zomato </h1>
+                    <h1 className="text1"> Make My Lunch </h1>
                     <p className="text1"> Discover the Best Food & Drinks in Chennai </p>
                 </div>
 

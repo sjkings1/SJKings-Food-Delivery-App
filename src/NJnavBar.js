@@ -103,7 +103,7 @@ function NJnavBar(props) {
 
             <div className="NJ-content">
 
-                <div className="title"> <h1 > zomato </h1> </div>
+                <div className="title"> <h1> Make My Lunch </h1> </div>
 
                 <div className="searchBar">
                     <Space direction="center">
@@ -121,7 +121,7 @@ function NJnavBar(props) {
                                     SetInTexToCard(true)
                                 }}
                                 placeholder="input search text"
-                                // onBlur={gohide}
+                                onBlur={gohide}
                                 allowClear
                                 style={{ width: 700 }} />
                         </Popover>
@@ -129,7 +129,7 @@ function NJnavBar(props) {
                 </div>
 
                 <div className="avatarDown">
-                    <Avatar src={<Image src="https://b.zmtcdn.com/data/o2_assets/c0bb85d3a6347b2ec070a8db694588261616149578.png?output-format=webp" style={{ width: 32 }}  />} />
+                    <Avatar src={<Image src="https://b.zmtcdn.com/data/o2_assets/c0bb85d3a6347b2ec070a8db694588261616149578.png?output-format=webp" style={{ width: 32 }} />} />
                     <Dropdown overlay={menu} trigger={['click']}>
                         <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
                             SIGN UP / LOGIN <DownOutlined />
