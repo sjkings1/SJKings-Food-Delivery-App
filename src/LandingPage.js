@@ -21,6 +21,7 @@ function LandingPage(props) {
     function popVisibleChange() {
         setPopVisible(true);
     }
+    
     function gohide() {
         setPopVisible(false);
     }
